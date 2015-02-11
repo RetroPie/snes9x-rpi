@@ -9,7 +9,7 @@ OPTIMISE= -D_ZAURUS -O3 -ffast-math
 UNZIPDEFINES=-DUNZIP_SUPPORT
 SOUNDDEFINES=-DSPC700_C
 
-CXXFLAGS = $(OPTIMISE) \
+CXXFLAGS += $(OPTIMISE) \
 -D__linux \
 -DZLIB \
 -DVAR_CYCLES \
@@ -19,7 +19,7 @@ $(SOUNDDEFINES) \
 $(UNZIPDEFINES) \
 -DNO_INLINE_SET_GET
 
-CFLAGS=$(CXXFLAGS)
+CFLAGS+=$(CXXFLAGS)
 
 LDFLAGS=-lboost_serialization -lSDL -lstdc++ -lz -lSDL_ttf -lboost_thread -lasound -lboost_system
 
