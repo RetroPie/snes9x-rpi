@@ -22,7 +22,7 @@ $(UNZIPDEFINES) \
 
 CFLAGS+=$(CXXFLAGS)
 
-LDFLAGS=-lboost_serialization -lSDL -lstdc++ -lz -lSDL_ttf -lboost_thread -lasound -lboost_system
+LDFLAGS=-lboost_serialization -lSDL -lstdc++ -lz -lSDL_ttf -lboost_thread -lasound -lboost_system -lpthread
 
 SNES9X_SRC = $(wildcard *.cpp)
 SNES9X_SRC += $(wildcard unix/*.cpp)
